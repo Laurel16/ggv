@@ -1,0 +1,10 @@
+.home-banner {
+  background: linear-gradient(-225deg,
+    rgba(0,101,168,0.5) 0%,
+    rgba(0,36,61,0.5) 50%),asset-url('banner.jpg');
+  background-size: cover;
+  height: 70vh;
+  color: white;
+  text-align: center;
+  padding-top: 40vh;
+}
