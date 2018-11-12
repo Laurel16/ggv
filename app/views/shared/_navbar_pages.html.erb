@@ -11,14 +11,41 @@
 
 
 
-    <%= link_to "Nos compétences", competence_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "Nos avocats", lawyers_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "Actualités", news_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "Nous contacter", contact_path, class: "navbar-wagon-item navbar-wagon-link" %>
-     <%= link_to root_path, class: "navbar-wagon-brand-pages" do %>
+    <%= link_to t(:"competence"), competence_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to t(:"lawyers"), lawyers_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to t(:"news"), news_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+    <%= link_to t(:"contact"), contact_path, class: "navbar-wagon-item navbar-wagon-link" %>
+  <div class="dropdown">
+      <button class="dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       <%= t :langages %>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+
+      <%= content_tag :li do %>
+      <%= link_to "English", locale: :en, class:"dropdown-item" %>
+      <%end unless current_page?(locale: :en) %>
+
+      <%= content_tag :li do %>
+      <%= link_to "Français", locale: :fr,class:"dropdown-item" %>
+      <% end unless current_page?(locale: :fr) %>
+
+
+      <%= content_tag :li do %>
+      <%= link_to "Deutsch", locale: :de,class:"dropdown-item" %>
+      <%end unless current_page?(locale: :de) %>
+
+      </div>
+    </div>
+
+
+    <%= link_to root_path, class: "navbar-wagon-brand-pages" do %>
         <%= image_tag "home.png", height: 10%>
 
     <% end %>
+
+
+
 
 
 
