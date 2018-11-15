@@ -4,10 +4,11 @@
     rgba(0,36,61,0.5) 50%),asset-url('banner.jpg');
   background-size: cover;
   background-position: right 35% bottom 45%;
-  height: 70vh;
+  height: 100vh;
   color: white;
   text-align: center;
   padding-top: 40vh;
+  background-attachment: fixed;
 }
 
 
@@ -35,3 +36,12 @@
   text-align: center;
   padding-top: 40vh;
 }
+
+.banner-tag {
+ color: #E6E6E6FF;
+ font-family: raleway;
+ line-height: 2em;
+ font-size: 21px;
+
+}
+

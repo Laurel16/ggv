@@ -1,22 +1,23 @@
-.btn-white{
-color: #00C29A;
-border: 1px solid #00C29A;
-background: #ffffff;
-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
 
 
 
  .dropdown-menu{
-  background-color: white;
-  border-color: #fff;
-  border-style: solid;
+  background-color: transparent;
   border-top: none;
   border-right: none;
   border-left: none;
   font-family: "Open sans";
   font-size: 14px;
   line-height: 2em;
+}
+
+.dropdown-menu li a {
+  color: #E6E6E6FF;
+}
+
+.dropdown-menu li a:hover{
+  color: #CCCCCCFF;
+  background-color: transparent;
 }
 
 
@@ -27,7 +28,7 @@ box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .dropdown-toggle {
-  background-color: white;
+  background-color: transparent;
   border-color: #fff;
   border-style: solid;
   border-top: none;
@@ -37,4 +38,8 @@ box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   font-size: 14px;
 }
 
+
+.dropdown {
+  color: #E6E6E6FF;
+}
 
