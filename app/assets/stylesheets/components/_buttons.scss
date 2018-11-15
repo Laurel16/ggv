@@ -21,6 +21,15 @@
 }
 
 
+.black li a {
+  color: #616668;
+}
+
+.black li a:hover{
+  color: #CCCCCCFF;
+  background-color: transparent;
+}
+
 .dropdown-item{
   background-color: transparent;
   border-color: #fff;
@@ -43,3 +52,7 @@
   color: #E6E6E6FF;
 }
 
+.dropdown.black {
+color: #616668;
+font-size: 14px;
+}
