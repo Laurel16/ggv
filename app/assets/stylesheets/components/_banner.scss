@@ -1,16 +1,53 @@
+
+
 .home-banner {
-  background: linear-gradient(-225deg,
+  background-image: linear-gradient(-225deg,
     rgba(0,101,168,0.5) 0%,
     rgba(0,36,61,0.5) 50%),asset-url('banner.jpg');
   background-size: cover;
-  background-position: right 35% bottom 45%;
+  background-position: center;
+  padding-top: 40vh;
   height: 100vh;
   color: white;
   text-align: center;
-  padding-top: 40vh;
-  background-attachment: fixed;
+  /* Pour parallax simple */
+  /*background-attachment: fixed;*/
+
 }
 
+
+.home-second-banner
+{
+  background-image: asset-url('Paris2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  width: 100vw;
+  color: white;
+  text-align: center;
+  padding-top: 40vh;
+
+  /* Pour parallax simple */
+
+}
+
+.home-third-banner
+{
+  background-image: linear-gradient(-225deg,
+    rgba(0,101,168,0.5) 0%,
+    rgba(0,36,61,0.5) 50%),asset-url('jurisclasseurs.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  color: white;
+  text-align: center;
+  padding-top: 40vh;
+
+  background-attachment: fixed;
+
+
+}
 
 .lawyers-banner {
   background: linear-gradient(-225deg,
@@ -37,11 +74,12 @@
   padding-top: 40vh;
 }
 
-.banner-tag {
+.home-text{
  color: #E6E6E6FF;
  font-family: raleway;
  line-height: 2em;
  font-size: 21px;
+
 
 }
 

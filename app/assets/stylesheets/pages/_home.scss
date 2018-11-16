@@ -1,7 +1,23 @@
+
+
+body {
+  margin: 0;
+}
+
+*{
+  transition: all ease-in-out 250ms;
+}
+
 .presentation
 {font-family: "Raleway";
 text-align: center;
 margin-top: 30px;
 padding: 50px;
 }
+
+.parallax {
+  transition: initial;
+}
+
+
 
