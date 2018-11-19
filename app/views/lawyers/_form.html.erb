@@ -1,0 +1,46 @@
+<div class="background-new-notice ">
+  <div class="bg-gradient-new-notice">
+    <div class="form-group margin-top">
+      <div class="container-lg margin-top">
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-3">
+            <div class="background-white-new-notice">
+      <br/>
+
+      <%= simple_form_for @lawyer do |f| %>
+      <%= f.input :first_name, label: "Prénom" %>
+      <%= f.input :last_name, label: "Nom"%>
+       <%= f.input :status, label: "Statut"%>
+       <%= f.input :presentation, label: "Présentation"%>
+      <%= f.input :competence, collection: Lawyer::COMPETENCES, label: "Domaines de compétence", prompt: "Choissisez une compétence principale" %>
+      <%= f.input :competences_details, label: "Détail des compétence", prompt: "Détaillez les compétences" %>
+      <%= f.input :langue, label: "Langues parlées"%>
+      <%= f.input :course, as: :text, label: "Quel est son parcours?" %>
+      <%= f.input :picture, label: "Voulez-vous ajouter une photo?" %>
+      <%= f.input :picture_cache, as: :hidden %>
+      <%= f.input :bar, label: "Quel barreau?" %>
+      <%= f.input :phone, label: "Numéro de téléphone" %>
+      <%= f.input :mail, label: "mail" %>
+      <%= f.input :vCard, label: "vCard" %>
+      <%= f.input :pdf, label: "PDF" %>
+
+      <%= f.button :submit, class: "btn btn-success" %>
+      <% if @lawyer.errors.any? %>
+          <div class="errors-container">
+            <ul>
+              <% @lawyer.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+    <% end %>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

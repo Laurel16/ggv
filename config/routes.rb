@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get 'news', to: 'pages#news', as: :news
    get 'contact', to: 'pages#contact', as: :contact
 
+resources :posts
+resources :lawyers
+
 
 
 

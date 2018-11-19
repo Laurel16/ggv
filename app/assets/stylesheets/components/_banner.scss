@@ -11,43 +11,16 @@
   color: white;
   text-align: center;
   /* Pour parallax simple */
-  /*background-attachment: fixed;*/
-
-}
-
-
-.home-second-banner
-{
-  background-image: asset-url('Paris2.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 80vh;
-  width: 100vw;
-  color: white;
-  text-align: center;
-  padding-top: 40vh;
-
-  /* Pour parallax simple */
-
-}
-
-.home-third-banner
-{
-  background-image: linear-gradient(-225deg,
-    rgba(0,101,168,0.5) 0%,
-    rgba(0,36,61,0.5) 50%),asset-url('jurisclasseurs.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 70vh;
-  color: white;
-  text-align: center;
-  padding-top: 40vh;
-
   background-attachment: fixed;
 
-
 }
+
+@media screen and (max-width: 1030px) {
+  .home-banner {
+    background-attachment: scroll;
+  }
+}
+
 
 .lawyers-banner {
   background: linear-gradient(-225deg,

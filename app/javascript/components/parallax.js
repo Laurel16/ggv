@@ -8,7 +8,7 @@ function parallax() {
   var screenHeight = $(window).height();
 
 
-  $('.parallax').each(function() {
+  $('.parallax_bg').each(function() {
     var offset = $(this).offset().top;
     var distanceFromBottom = offset - scroll - screenHeight
 

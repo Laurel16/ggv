@@ -42,6 +42,7 @@ gem 'simple_form'
 gem 'rails-i18n'
 gem 'devise'
 gem 'jquery-turbolinks'
+gem 'dotenv-rails', groups: [:development, :test]
 
 
 group :development, :test do
