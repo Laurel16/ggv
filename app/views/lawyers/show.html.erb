@@ -1,0 +1,36 @@
+  <body style= "background-color: white">
+  <% content_for :nav, render('shared/navbar_home') %>
+
+
+  <div class="container lawyer-show">
+    <div class="row">
+
+      <div class="col-xs-6">
+         <%= cl_image_tag @lawyer.picture, width: 400%>
+
+      </div>
+
+      <div class="col-xs-6 lawyer-name">
+         <h1 ><%= "#{@lawyer.first_name}"+ " "+ "#{@lawyer.last_name}" %></h1>
+
+        <p><%= @lawyer.competences %> / <%= @lawyer.competences_2 %></p>
+
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+<%= link_to "Modifier", edit_lawyer_path(@lawyer), class: "btn btn-success"%>
+
+<%= link_to "Supprimer", lawyer_path(@lawyer), method: :delete, class: "btn btn-success"  %>

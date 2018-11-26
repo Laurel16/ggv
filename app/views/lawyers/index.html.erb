@@ -1,0 +1,29 @@
+
+<% content_for :register, render('shared/navbar_pages') %>
+
+
+
+
+<div class="container lawyers">
+  <div class="row">
+
+    <% if @lawyers %>
+    <% @lawyers.each do |lawyer| %>
+    <div class="col-xs-12 col-sm-4">
+
+<a href="<%= lawyer_url(lawyer) %>" >
+
+               <%= cl_image_tag lawyer.picture, class:"avatar-large"%>
+</a>
+              <p><%= "#{lawyer.first_name}"+ " "+ "#{lawyer.last_name}"%></p>
+
+
+
+
+
+              </div>
+
+      <% end %>
+      <% end %>
+    </div>
+  </div>

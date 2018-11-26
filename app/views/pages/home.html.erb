@@ -15,7 +15,6 @@ Un engagement constant à vos côtés.</p>
 </div>
 
 
-
 <section class="parallax">
 <p class="home-text"> Nous sommes un cabinet doté d’un savoir-faire international et d’un réseau mondial.<br/>
 Nous vous accompagnons dans les domaines du droit et de la fiscalité. <br/>
@@ -40,28 +39,36 @@ Un engagement constant à vos côtés.</p>
 
 
 </section>
-
-
 <div class="container lawyers">
-  <h1 class="text-align text-center"> Nos équipes</h1>
+  <h1>Nos collaborateurs</h1>
   <div class="row">
-    <div class="col-xs-12 col-sm-4">
-      <%= image_tag "Kim-Linard.jpg", class: "avatar-large"%>
-      <p class="avatar-text">Kim Linard<br/> Avocate</p>
 
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <%= image_tag "Maria-Lancri.jpg", class: "avatar-large"%>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <%= image_tag "Markus-Erkert.jpg", class: "avatar-large"%>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <%= image_tag "Pascal-Ngatsing.jpg", class: "avatar-large"%>
+    <% if @lawyers %>
+    <% @lawyers.each do |lawyer| %>
+    <div class="col-xs-12 col-sm-3 lawyer-parade">
+
+    <a href="<%= lawyer_url(lawyer) %>" >
+
+               <%= cl_image_tag lawyer.picture, class:"avatar-large"%>
+    </a>
+              <p><%= "#{lawyer.first_name}"+ " "+ "#{lawyer.last_name}"%></p>
+
+
+
+
+              </div>
+
+      <% end %>
+      <% end %>
     </div>
   </div>
 
 
+
+  </div>
+
+
+<%= link_to "Créer un avocat", new_lawyer_path, class: "btn btn-success" %>
 
 
 </div>

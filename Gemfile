@@ -43,6 +43,8 @@ gem 'rails-i18n'
 gem 'devise'
 gem 'jquery-turbolinks'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
 
 
 group :development, :test do
