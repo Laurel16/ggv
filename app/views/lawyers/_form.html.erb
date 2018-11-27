@@ -14,8 +14,8 @@
        <%= f.input :bar, label: "Quel barreau?" %>
        <%= f.input :presentation, label: "Présentation"%>
       <%= f.input :competences, collection: Lawyer::COMPETENCES, label: "Domaines de compétence", prompt: "Première compétence" %>
-      <%= f.input :competences_2, collection: Lawyer::SECONDCOMPETENCES, label: "Domaines de compétence 2", prompt: "Seconde compétence" %>
-      <%= f.input :competences_3, collection: Lawyer::THIRDCOMPETENCES, label: "Domaines de compétence 3", prompt: "Troisième compétence" %>
+      <%= f.input :competences_2, collection: Lawyer::SECONDCOMPETENCES, label: "Domaines de compétence 2",  :include_blank => '(All)', prompt: "Seconde compétence" %>
+      <%= f.input :competences_3, collection: Lawyer::THIRDCOMPETENCES, label: "Domaines de compétence 3",  :include_blank => '(All)', prompt: "Troisième compétence" %>
       <%= f.input :competences_details, label: "Détail des compétence", prompt: "Détaillez les compétences" %>
       <%= f.input :langages, label: "Langues parlées"%>
       <%= f.input :course, as: :text, label: "Quel est son parcours?" %>

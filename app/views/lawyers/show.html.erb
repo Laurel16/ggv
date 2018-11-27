@@ -5,15 +5,33 @@
   <div class="container lawyer-show">
     <div class="row">
 
-      <div class="col-xs-6">
+      <div class="col-xs-12 col-md-6">
          <%= cl_image_tag @lawyer.picture, width: 400%>
 
       </div>
 
-      <div class="col-xs-6 lawyer-name">
+      <div class="col-xs-12 col-md-6 lawyer-name">
          <h1 ><%= "#{@lawyer.first_name}"+ " "+ "#{@lawyer.last_name}" %></h1>
+           <p><%= @lawyer.status %></p>
+           <p><%= @lawyer.bar %> </p>
+           <p> <%= @lawyer.presentation %></p>
+           <p><strong>Ses domaines de compétence sont </strong> :
 
-        <p><%= @lawyer.competences %> / <%= @lawyer.competences_2 %></p>
+            <%= @lawyer.competences %>
+            <%if @lawyer.competences_2.present? %>
+            / <%= @lawyer.competences_2 %>
+            <%end%>
+            <%if @lawyer.competences_3.present? %>
+            / <%= @lawyer.competences_3 %>
+            <%end%>
+          </p>
+          <p><%= @lawyer.competences_details %></p>
+          <p><strong>Langues parlées</strong>: <%=@lawyer.languages %></p>
+          <p><strong>Parcours </strong>: </p>
+          <p> <%= @lawyer.course.html_safe %> </p>
+          <p> <strong><%= @lawyer.address%> :</strong></p>
+          <p><%= @lawyer.phone%></p>
+          <p>Email: <%= @lawyer.mail%></p>
 
       </div>
     </div>

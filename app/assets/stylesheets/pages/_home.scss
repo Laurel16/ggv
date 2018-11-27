@@ -95,8 +95,15 @@ margin-top: 40px;
 
 .lawyer-name h1{
 font-size: 30px;
+margin-top: 0;
+}
+
+@media screen and (max-width:1030px) {
+  .lawyer-name h1 {
+    margin-top: 20px;
+  }
 }
 
 .lawyer-parade {
-  margin-top: 20px;
+  margin-top: 30px;
 }

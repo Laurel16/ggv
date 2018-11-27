@@ -16,9 +16,9 @@
     <%= link_to t(:"news"), news_path, class: "navbar-wagon-item navbar-wagon-link-white" %>
 
     <%= link_to t(:"contact"), contact_path, class: "navbar-wagon-item navbar-wagon-link-white" %>
-  <div class="dropdown">
+      <div class="dropdown">
       <button class="dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-       <%= t :langages %>
+       <%= t :languages %>
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
 
@@ -56,6 +56,28 @@
   <!-- Dropdown list appearing on mobile only -->
 
     <div class="navbar-wagon-item hidden-md hidden-lg">
+
+      <div class="dropdown">
+      <button class="dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       <%= t :languages %>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
+
+      <%= content_tag :li do %>
+      <%= link_to "English", locale: :en, class:"dropdown-item" %>
+      <%end unless current_page?(locale: :en) %>
+
+      <%= content_tag :li do %>
+      <%= link_to "Français", locale: :fr,class:"dropdown-item" %>
+      <% end unless current_page?(locale: :fr) %>
+
+
+      <%= content_tag :li do %>
+      <%= link_to "Deutsch", locale: :de,class:"dropdown-item" %>
+      <%end unless current_page?(locale: :de) %>
+
+      </div>
+
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
@@ -63,9 +85,11 @@
         <li>  <%= link_to "Nos avocats", lawyers_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
         <li> <%= link_to "Actualités", news_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
         <li> <%= link_to "Nous contacter", contact_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
-
       </ul>
+
+
     </div>
   </div>
 
+</div>
 </div>
