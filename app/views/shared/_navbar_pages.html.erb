@@ -1,4 +1,4 @@
-<div class="navbar-wagon navbar-fixed-top ">
+<div class="navbar-wagon navbar-fixed-top pages ">
   <!-- Logo -->
  <%= link_to root_path, class: "navbar-wagon-brand" do %>
         <%= image_tag "logo.jpg", height: 50%>
@@ -16,11 +16,12 @@
     <%= link_to t(:"news"), news_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <%= link_to t(:"contact"), contact_path, class: "navbar-wagon-item navbar-wagon-link" %>
-  <div class="dropdown black">
-      <button class="dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+  <div class="dropdown">
+      <button class="dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
        <%= t :languages %>
       </button>
-      <div class="dropdown-menu black" aria-labelledby="dropdownMenu2">
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu">
 
       <%= content_tag :li do %>
       <%= link_to "English", locale: :en, class:"dropdown-item" %>

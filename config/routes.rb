@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
   devise_for :users
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
   get 'pages/home'
   root to: 'pages#home'
   get 'competence', to: 'pages#competence', as: :competence

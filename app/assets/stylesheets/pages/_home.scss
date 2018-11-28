@@ -58,8 +58,9 @@ padding: 50px;
 
 .lawyers {
 
-color: #003e82;
+color: #003781;
 margin-top: 40px;
+margin-bottom: 40px;
 }
 
 
@@ -67,7 +68,7 @@ margin-top: 40px;
 .lawyers h1 {
 
     line-height: 1em;
-    font-family: futura-pt;
+    font-family: "Raleway";
     font-weight: 700;
     font-style: normal;
     font-size: 45px;
@@ -77,6 +78,7 @@ margin-top: 40px;
     white-space: pre-wrap;
     text-align: center;
     margin-bottom: 40px;
+    letter-spacing: 0.1em;
 
 }
 
@@ -86,7 +88,8 @@ margin-top: 40px;
 }
 
 .lawyer-show {
-  margin-top: 100px;
+  margin-top: 140px;
+  margin-bottom: 80px;
 }
 
 .lawyer-name {

@@ -39,12 +39,14 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass' # Bootstrap v3
 gem 'font-awesome-sass'
 gem 'simple_form'
+gem 'i18n'
 gem 'rails-i18n'
 gem 'devise'
 gem 'jquery-turbolinks'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
+gem 'i18n-active_record', :require => 'i18n/active_record'
 
 
 group :development, :test do

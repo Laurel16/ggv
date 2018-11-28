@@ -1,5 +1,5 @@
 function initUpdateNavbarOnScroll() {
-  const navbar = document.querySelector('.navbar-wagon-right');
+  const navbar = document.querySelector('.navbar-wagon');
   if (navbar) {
     window.addEventListener('scroll', () => {
       if (window.scrollY >= window.innerHeight) {
@@ -13,3 +13,17 @@ function initUpdateNavbarOnScroll() {
 
 export { initUpdateNavbarOnScroll };
 
+function initUpdateNavbarOnScrollPages() {
+  const navbar = document.querySelector('.pages');
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY >= 10) {
+        navbar.classList.add('hidden');
+      } else {
+        navbar.classList.remove('hidden');
+      }
+    });
+  }
+}
+
+export { initUpdateNavbarOnScrollPages };

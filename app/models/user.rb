@@ -3,11 +3,4 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
-         def self.langages_options
-          {"English" => "en", "Français" =>"fr", "German" =>"de"
-
-          }
-        end
-
 end

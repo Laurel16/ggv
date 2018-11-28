@@ -1,5 +1,8 @@
   <body style= "background-color: white">
-  <% content_for :nav, render('shared/navbar_home') %>
+    <% content_for(:title) do %>
+    <%= "#{@lawyer.first_name}"+ " "+ "#{@lawyer.last_name}" %>
+    <% end %>
+  <% content_for :nav, render('shared/navbar_pages') %>
 
 
   <div class="container lawyer-show">
