@@ -14,3 +14,35 @@
   <p>A constant commitment at your side.</p>
 
 </div>
+
+<div class="container lawyers">
+  <h1>Nos collaborateurs</h1>
+  <div class="row">
+
+    <% if @lawyers %>
+    <% @lawyers.each do |lawyer| %>
+    <div class="col-xs-6 col-sm-3 lawyer-parade">
+
+    <a href="<%= lawyer_url(lawyer) %>" >
+
+               <%= cl_image_tag lawyer.picture, class:"avatar-large"%>
+    </a>
+              <p><%= "#{lawyer.first_name}"+ " "+ "#{lawyer.last_name}"%></p>
+
+
+
+
+              </div>
+
+      <% end %>
+      <% end %>
+    </div>
+  </div>
+
+
+
+  </div>
+
+
+<%= link_to "Créer un avocat", new_lawyer_path, class: "btn btn-success" %>
+
