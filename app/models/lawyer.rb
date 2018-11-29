@@ -1,7 +1,5 @@
 class Lawyer < ApplicationRecord
 
-  COMPETENCES = ["Droit du travail", "Droit des sociétés et F&A", "Droit commercial", "Immobilier", "Fiscalité", "Compliance", "Contentieux"]
-  SECONDCOMPETENCES = ["Droit du travail", "Droit des sociétés et F&A", "Droit commercial", "Immobilier", "Fiscalité", "Compliance", "Contentieux"]
-  THIRDCOMPETENCES = ["Droit du travail", "Droit des sociétés et F&A", "Droit commercial", "Immobilier", "Fiscalité", "Compliance", "Contentieux"]
+translates :first_name, :last_name, :competences, :competences_details, :presentation, :languages, :bar, :course, :phone, :mail, :vCard, :pdf, :address, :status, :competences_2, :competences_3
   mount_uploader :picture, PhotoUploader
 end

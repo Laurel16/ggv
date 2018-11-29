@@ -47,6 +47,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
 gem 'i18n-active_record', :require => 'i18n/active_record'
+gem 'globalize', '~> 5.1.0'
 
 
 group :development, :test do

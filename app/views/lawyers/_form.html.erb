@@ -7,17 +7,21 @@
             <div class="background-white-new-notice">
       <br/>
 
+
+<p><b>I18n.locale:</b>
+<%= I18n.locale %>
+</p>
       <%= simple_form_for @lawyer do |f| %>
-      <%= f.input :first_name, label: "Prénom" %>
-      <%= f.input :last_name, label: "Nom"%>
+      <%= f.input :first_name, label: I18n.t("first_name") %>
+      <%= f.input :last_name, label: "cuicui"%>
        <%= f.input :status, label: "Statut"%>
        <%= f.input :bar, label: "Quel barreau?" %>
        <%= f.input :presentation, label: "Présentation"%>
-      <%= f.input :competences, collection: Lawyer::COMPETENCES, label: "Domaines de compétence", prompt: "Première compétence" %>
-      <%= f.input :competences_2, collection: Lawyer::SECONDCOMPETENCES, label: "Domaines de compétence 2",  :include_blank => '(All)', prompt: "Seconde compétence" %>
-      <%= f.input :competences_3, collection: Lawyer::THIRDCOMPETENCES, label: "Domaines de compétence 3",  :include_blank => '(All)', prompt: "Troisième compétence" %>
+      <%= f.input :competences, collection: [ :labour, :corporate, :commercial, :real_estate, :taxes, :compliance, :litigation ], label: "Domaines de compétence", :include_blank => '' %>
+      <%= f.input :competences_2, collection: [ :labour, :corporate, :commercial, :real_estate, :taxes, :compliance, :litigation ], label: "Domaines de compétence 2", :include_blank => '' %>
+      <%= f.input :competences_3, collection: [ :labour, :corporate, :commercial, :real_estate, :taxes, :compliance, :litigation ], label: "Domaines de compétence 3", :include_blank => '' %>
       <%= f.input :competences_details, label: "Détail des compétence", prompt: "Détaillez les compétences" %>
-      <%= f.input :langages, label: "Langues parlées"%>
+      <%= f.input :languages, label: "Langues parlées"%>
       <%= f.input :course, as: :text, label: "Quel est son parcours?" %>
       <%= f.input :picture, label: "Voulez-vous ajouter une photo?" %>
       <%= f.input :picture_cache, as: :hidden %>

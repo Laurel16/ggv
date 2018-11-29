@@ -6,6 +6,9 @@
 
 
   <div class="container lawyer-show">
+    <%= link_to "Modifier", edit_lawyer_path(@lawyer), class: "btn btn-success"%>
+
+<%= link_to "Supprimer", lawyer_path(@lawyer), method: :delete, class: "btn btn-success"  %>
     <div class="row">
 
       <div class="col-xs-12 col-md-6">
@@ -31,7 +34,9 @@
           <p><%= @lawyer.competences_details %></p>
           <p><strong>Langues parlées</strong>: <%=@lawyer.languages %></p>
           <p><strong>Parcours </strong>: </p>
+          <% if @lawyer.course.present? %>
           <p> <%= @lawyer.course.html_safe %> </p>
+          <% end %>
           <p> <strong><%= @lawyer.address%> :</strong></p>
           <p><%= @lawyer.phone%></p>
           <p>Email: <%= @lawyer.mail%></p>
@@ -52,6 +57,4 @@
 
 
 
-<%= link_to "Modifier", edit_lawyer_path(@lawyer), class: "btn btn-success"%>
 
-<%= link_to "Supprimer", lawyer_path(@lawyer), method: :delete, class: "btn btn-success"  %>

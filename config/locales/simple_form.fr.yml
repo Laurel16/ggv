@@ -1,0 +1,30 @@
+fr:
+  simple_form:
+    options:
+      lawyer:
+        competences:
+            labour: "Droit des sociétés"
+            corporate: "Droit des sociétés et M&A"
+            commercial: "Droit commercial"
+            real_estate: "Immobilier"
+            taxes: "Fiscalité"
+            compliance: "Compliance"
+            litigation: "Contentieux"
+
+        competences_2:
+            labour: "Droit des sociétés"
+            corporate: "Droit des sociétés et M&A"
+            commercial: "Droit commercial"
+            real_estate: "Immobilier"
+            taxes: "Fiscalité"
+            compliance: "Compliance"
+            litigation: "Contentieux"
+
+        competences_3:
+            labour: "Droit des sociétés"
+            corporate: "Droit des sociétés et M&A"
+            commercial: "Droit commercial"
+            real_estate: "Immobilier"
+            taxes: "Fiscalité"
+            compliance: "Compliance"
+            litigation: "Contentieux"

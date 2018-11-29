@@ -1,0 +1,31 @@
+
+de:
+  simple_form:
+    options:
+      lawyer:
+        competences:
+            labour: "Arbeitsweise"
+            corporate: "Gesellschaftsrecht und M&A"
+            commercial: "Handelsrecht"
+            real_estate: "Immobilien"
+            taxes: "Steuern"
+            compliance: "Compliance"
+            litigation: "Rechtsstreit"
+
+            competences_2:
+            labour: "Arbeitsweise"
+            corporate: "Gesellschaftsrecht und M&A"
+            commercial: "Handelsrecht"
+            real_estate: "Immobilien"
+            taxes: "Steuern"
+            compliance: "Compliance"
+            litigation: "Rechtsstreit"
+
+            competences_3:
+            labour: "Arbeitsweise"
+            corporate: "Gesellschaftsrecht und M&A"
+            commercial: "Handelsrecht"
+            real_estate: "Immobilien"
+            taxes: "Steuern"
+            compliance: "Compliance"
+            litigation: "Rechtsstreit"

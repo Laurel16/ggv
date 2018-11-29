@@ -29,3 +29,44 @@ en:
     # prompts:
     #   defaults:
     #     age: 'Select your age'
+    placeholders:
+      lawyer:
+        first_name: "First name"
+        last_name: "Last name"
+        status: "Status"
+        bar: "Bar"
+        presentation: "presentation"
+        picture: "picture"
+        address: "adresse"
+        phone: "phone"
+
+
+    options:
+      lawyer:
+        competences:
+            labour: "Labour law"
+            corporate: "Corporate law and M&A"
+            commercial: "Commercial law"
+            real_estate: "Real estate"
+            taxes: "Taxes"
+            compliance: "Compliance"
+            litigation: "Litigation"
+
+        competences_2:
+            labour: "Labour law"
+            corporate: "Corporate law and M&A"
+            commercial: "Commercial law"
+            real_estate: "Real estate"
+            taxes: "Taxes"
+            compliance: "Compliance"
+            litigation: "Litigation"
+
+        competences_3:
+            labour: "Labour law"
+            corporate: "Corporate law and M&A"
+            commercial: "Commercial law"
+            real_estate: "Real estate"
+            taxes: "Taxes"
+            compliance: "Compliance"
+            litigation: "Litigation"
+

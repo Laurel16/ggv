@@ -10,10 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181128095220) do
+ActiveRecord::Schema.define(version: 20181129191452) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "lawyer_translations", force: :cascade do |t|
+    t.integer "lawyer_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "competences"
+    t.string "competences_details"
+    t.string "presentation"
+    t.string "picture"
+    t.string "languages"
+    t.string "bar"
+    t.string "course"
+    t.string "phone"
+    t.string "mail"
+    t.string "vCard"
+    t.string "pdf"
+    t.string "address"
+    t.string "status"
+    t.string "picture_cache"
+    t.string "competences_2"
+    t.string "competences_3"
+    t.index ["lawyer_id"], name: "index_lawyer_translations_on_lawyer_id"
+    t.index ["locale"], name: "index_lawyer_translations_on_locale"
+  end
 
   create_table "lawyers", force: :cascade do |t|
     t.string "first_name"
