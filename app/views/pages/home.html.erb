@@ -4,8 +4,8 @@
 
 
 <div class="home-banner ">
-<%= t(:"greetings") %>
-<p class="home-text"> Nous sommes un cabinet doté d’un savoir-faire international et d’un réseau mondial.<br/>
+
+<p class="home-text"> <%= t(:"greetings") %> !<br/> Nous sommes un cabinet doté d’un savoir-faire international et d’un réseau mondial.<br/>
 Nous vous accompagnons dans les domaines du droit et de la fiscalité. <br/>
 
 GGV vous propose  des compétences pointues, une orientation stratégique et, le plus important : <br/>
@@ -15,14 +15,14 @@ Un engagement constant à vos côtés.</p>
 </div>
 
 <div class="container lawyers">
-  <h1>Nos collaborateurs</h1>
+  <h1> <%= t(:"team") %></h1>
   <div class="row">
 
     <% if @lawyers %>
     <% @lawyers.each do |lawyer| %>
     <div class="col-xs-6 col-sm-3 lawyer-parade">
 
-    <a href="<%= lawyer_url(lawyer) %>" >
+    <a href="<%= lawyer_url(lawyer) %>" data-turbolinks = "false">
 
                <%= cl_image_tag lawyer.picture, class:"avatar-large"%>
     </a>
@@ -39,35 +39,20 @@ Un engagement constant à vos côtés.</p>
 
   </div>
 
-
+<div style= "margin-bottom: 100px; text-align: center;">
+<% if current_user && current_user.admin %>
 
 <%= link_to "Créer un avocat", new_lawyer_path, class: "btn btn-success" %>
-
+<% end %>
+</div>
 
 <section class="parallax">
-<p class="home-text"> Nous sommes un cabinet doté d’un savoir-faire international et d’un réseau mondial.<br/>
-Nous vous accompagnons dans les domaines du droit et de la fiscalité. <br/>
 
-GGV vous propose  des compétences pointues, une orientation stratégique et, le plus important : <br/>
-
-Un engagement constant à vos côtés.</p>
 
 
 </section>
 
 
-
-
-<section class="parallax">
-<p class="home-text"> Nous sommes un cabinet doté d’un savoir-faire international et d’un réseau mondial.<br/>
-Nous vous accompagnons dans les domaines du droit et de la fiscalité. <br/>
-
-GGV vous propose  des compétences pointues, une orientation stratégique et, le plus important : <br/>
-
-Un engagement constant à vos côtés.</p>
-
-
-</section>
 
 
 

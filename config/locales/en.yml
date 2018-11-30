@@ -31,12 +31,18 @@
 
 en:
   hello: "Hello world"
-  greetings : "Welcome"
+  greetings : "welcome on GGV's website"
   lawyers: "Lawyers"
   news: "News"
   contact: "Contacts"
   competence: "Competences"
   languages: "Languages"
+  team: "Our team"
+  domaines: "Subjects"
+  spoken: "Languages"
+  course: "Vita"
+  desk: "Office"
+
 
 
 

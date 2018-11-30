@@ -7,7 +7,7 @@ class LawyersController < ApplicationController
   skip_before_action :verify_authenticity_token
 
     def index
-        @lawyers = Lawyer.all
+        @lawyers = Lawyer.order(last_name: :asc)
 
 
     end

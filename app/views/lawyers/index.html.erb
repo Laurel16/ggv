@@ -1,29 +1,40 @@
-
-<% content_for :register, render('shared/navbar_pages') %>
-
-
-
-
-<div class="container lawyers">
-  <div class="row">
-
-    <% if @lawyers %>
-    <% @lawyers.each do |lawyer| %>
-    <div class="col-xs-12 col-sm-4">
-
-<a href="<%= lawyer_url(lawyer) %>" >
-
-               <%= cl_image_tag lawyer.picture, class:"avatar-large"%>
-</a>
-              <p><%= "#{lawyer.first_name}"+ " "+ "#{lawyer.last_name}"%></p>
+<body style ="background-color:white;">
+  <% content_for :register, render('shared/navbar_pages') %>
 
 
 
 
 
-              </div>
+  <div class="container lawyers lawyers_index">
+    <h1> <%= t(:"team") %></h1>
+    <div class="row">
 
-      <% end %>
-      <% end %>
+      <% if @lawyers %>
+      <% @lawyers.each do |lawyer| %>
+      <div class="col-xs-6 col-sm-3 lawyer-parade">
+
+      <a href="<%= lawyer_url(lawyer) %>" data-turbolinks = "false">
+
+                 <%= cl_image_tag lawyer.picture, class:"avatar-large"%>
+      </a>
+                <p><%= "#{lawyer.first_name}"+ " "+ "#{lawyer.last_name}"%></p>
+
+
+
+
+                </div>
+
+        <% end %>
+        <% end %>
+      </div>
+
     </div>
+
+  <div style= "margin-bottom: 100px; text-align: center;">
+  <% if current_user && current_user.admin %>
+
+  <%= link_to "Créer un avocat", new_lawyer_path, class: "btn btn-success" %>
+  <% end %>
   </div>
+
+</body>

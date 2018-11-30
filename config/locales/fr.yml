@@ -1,10 +1,15 @@
 fr:
-  greetings : "Bienvenue"
+  greetings : "Bienvenue sur le site de GGV"
   lawyers: "Nos avocats"
   news: "Actualités"
   contact: "Contacts"
   competence: "Nos compétences"
   languages: "Langues"
+  team: "Notre équipe"
+  domaines: "Ses domaines de compétence sont"
+  spoken: "Langues parlées"
+  course: "Parcours"
+  desk: "Bureau de"
 
 
 

@@ -12,11 +12,9 @@ initUpdateNavbarOnScroll();
 
 
 import { initUpdateNavbarOnScrollPages } from '../components/navbar';
-initUpdateNavbarOnScrollPages();;
+initUpdateNavbarOnScrollPages();
 
 
 import { parallax } from '../components/parallax';
 parallax();
-
-
 

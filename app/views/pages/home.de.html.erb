@@ -7,24 +7,22 @@
 
 <div class="home-banner ">
 
-<p class="home-text"> <p>Wir sind ein Unternehmen mit internationaler Expertise und einem globalen Netzwerk.</p>
-  <p>Wir unterstützen Sie in den Bereichen Recht und Steuern.</p>
-  </p>
-  <p>GGV bietet Ihnen fortgeschrittene Fähigkeiten, strategische Ausrichtung und vor allem:</p>
-
-  <p>Ein ständiges Engagement an Ihrer Seite.</p>
+<p class="home-text"> <%= t(:"greetings") %> ! <br/> Wir sind ein Unternehmen mit internationaler Expertise und einem globalen Netzwerk.<br/>
+Wir unterstützen Sie in den Bereichen Recht und Steuern.<br/>
+GGV bietet Ihnen fortgeschrittene Fähigkeiten, strategische Ausrichtung und vor allem:<br/>
+Ein ständiges Engagement an Ihrer Seite.<br/>
 
 </div>
 
 <div class="container lawyers">
-  <h1>Nos collaborateurs</h1>
+  <h1><%= t(:"team") %></h1>
   <div class="row">
 
     <% if @lawyers %>
     <% @lawyers.each do |lawyer| %>
     <div class="col-xs-6 col-sm-3 lawyer-parade">
 
-    <a href="<%= lawyer_url(lawyer) %>" >
+    <a href="<%= lawyer_url(lawyer) %>" data-turbolinks = "false" >
 
                <%= cl_image_tag lawyer.picture, class:"avatar-large"%>
     </a>
@@ -44,6 +42,7 @@
 
   </div>
 
-
+ <% if current_user && current_user.admin %>
 <%= link_to "Créer un avocat", new_lawyer_path, class: "btn btn-success" %>
+<% end %>
 

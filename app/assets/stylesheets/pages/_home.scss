@@ -1,7 +1,11 @@
+html {
+  min-height: 100%;
+}
 
 
 body {
   margin: 0;
+  min-height: 100vh;
 }
 
 *{
@@ -26,7 +30,7 @@ padding: 50px;
 }
 
 .parallax:nth-of-type(1) {
-  background-image: asset-url('Paris2.jpg');
+  background-image: asset-url('news.jpg');
 }
 
 .parallax:nth-of-type(2) {
@@ -60,7 +64,7 @@ padding: 50px;
 
 color: #003781;
 margin-top: 40px;
-margin-bottom: 40px;
+margin-bottom: 150px;
 }
 
 
@@ -109,4 +113,8 @@ margin-top: 0;
 
 .lawyer-parade {
   margin-top: 30px;
+}
+
+.lawyers_index {
+  margin-top: 100px;
 }
