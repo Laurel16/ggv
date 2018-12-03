@@ -20,13 +20,14 @@
            <p><%= @lawyer.bar %> </p>
            <p> <%= @lawyer.presentation %></p>
            <p><strong><%= t(:"domaines") %> </strong> :
-
-            <%= @lawyer.competences %>
+             <% if @lawyer.competences.present? %>
+            <%= t(@lawyer.competences) %>
+            <% end %>
             <%if @lawyer.competences_2.present? %>
-            / <%= @lawyer.competences_2 %>
+            / <%= t(@lawyer.competences_2) %>
             <%end%>
             <%if @lawyer.competences_3.present? %>
-            / <%= @lawyer.competences_3 %>
+            / <%= t(@lawyer.competences_3) %>
             <%end%>
           </p>
           <p><%= @lawyer.competences_details %></p>
@@ -37,7 +38,7 @@
           <% end %>
           <p> <strong><%= t(:"desk") %> <%= @lawyer.address%></strong></p>
           <p><%= @lawyer.phone%></p>
-          <p>Email: <%= @lawyer.mail%></p>
+          <p><strong>Email:</strong> <%= @lawyer.mail%></p>
 
       </div>
     </div>

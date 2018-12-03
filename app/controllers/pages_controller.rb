@@ -1,11 +1,7 @@
 class PagesController < ApplicationController
   def home
-
-
 @lawyers = Lawyer.order(last_name: :asc)
-
-
-
+@posts = Post.all
   end
 
   def competence

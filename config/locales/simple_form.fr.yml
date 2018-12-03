@@ -10,7 +10,6 @@ fr:
             taxes: "Fiscalité"
             compliance: "Compliance"
             litigation: "Contentieux"
-
         competences_2:
             labour: "Droit des sociétés"
             corporate: "Droit des sociétés et M&A"
@@ -19,7 +18,6 @@ fr:
             taxes: "Fiscalité"
             compliance: "Compliance"
             litigation: "Contentieux"
-
         competences_3:
             labour: "Droit des sociétés"
             corporate: "Droit des sociétés et M&A"
@@ -28,3 +26,8 @@ fr:
             taxes: "Fiscalité"
             compliance: "Compliance"
             litigation: "Contentieux"
+      post:
+        category:
+            event: "Evènement"
+            conference: "Conférence"
+            media: "Médias"

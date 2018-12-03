@@ -10,6 +10,24 @@ fr:
   spoken: "Langues parlées"
   course: "Parcours"
   desk: "Bureau de"
+  posts: "Derniers articles"
+  event: "Evenement"
+  conference: "Conférence"
+  media: "Médias"
+  labour: "Droit des sociétés"
+  corporate: "Droit des sociétés et M&A"
+  commercial: "Droit commercial"
+  real_estate: "Immobilier"
+  taxes: "Fiscalité"
+  compliance: "Compliance"
+  litigation: "Contentieux"
+  news_home: "Consultez nos actualités"
+  all_competences: "Toutes nos compétences"
+  all_news: "Toutes nos actualités"
+  dates:
+    formats:
+      default: "%d-%B-%Y"
+
 
 
 

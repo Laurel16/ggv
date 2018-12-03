@@ -1,0 +1,46 @@
+<div class="body" style= "margin: 0">
+  <% content_for :nav, render('shared/navbar_register') %>
+
+  <div class="background-new-notice ">
+    <div class="bg-gradient-new-notice">
+      <div class="form-group margin-top">
+        <div class="container-lg margin-top">
+          <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+              <div class="background-white-new-notice">
+        <br/>
+
+
+  <p><b>I18n.locale:</b>
+  <%= I18n.locale %>
+  </p>
+        <%= simple_form_for @post do |f| %>
+        <%= f.input :title, label: :title %>
+        <%= f.input :content, as: :text, label: :text%>
+        <%= f.input :category, collection:Post::SUBJECTS, label: :category, :include_blank => '' %>
+        <%= f.input :date, as: :date, :include_blank => '(All)', label: :date%>
+        <%= f.input :place, label: :place %>
+        <%= f.input :illustration, label: :illustration %>
+        <%= f.input :illustration_cache, as: :hidden %>
+
+        <%= f.button :submit, class: "btn btn-success" %>
+        <% if @post.errors.any? %>
+            <div class="errors-container">
+              <ul>
+                <% @post.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+      <% end %>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

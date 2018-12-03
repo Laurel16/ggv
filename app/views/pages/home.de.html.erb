@@ -7,7 +7,7 @@
 
 <div class="home-banner ">
 
-<p class="home-text"> <%= t(:"greetings") %> ! <br/> Wir sind ein Unternehmen mit internationaler Expertise und einem globalen Netzwerk.<br/>
+<p class="home-text"> <span><%= t(:"greetings") %> !</span><br/>Wir sind ein Unternehmen mit internationaler Expertise und einem globalen Netzwerk.<br/>
 Wir unterstützen Sie in den Bereichen Recht und Steuern.<br/>
 GGV bietet Ihnen fortgeschrittene Fähigkeiten, strategische Ausrichtung und vor allem:<br/>
 Ein ständiges Engagement an Ihrer Seite.<br/>
@@ -46,3 +46,71 @@ Ein ständiges Engagement an Ihrer Seite.<br/>
 <%= link_to "Créer un avocat", new_lawyer_path, class: "btn btn-success" %>
 <% end %>
 
+
+<section class="parallax">
+
+  <p class="white">
+    <span style= "font-size: 32px; font-weight: bold, letter-spacing: 1em;">" Das große Ganze sehen " </span><br/><br/>
+
+Bei GGV erhalten unsere Mandanten gebündeltes Fachwissen aus einer Hand.<br/> Ob bei den Themen Recht, Steuern oder Bilanzierung – wir zählen auf die Kombination von individueller Kompetenz und multidisziplinärem Arbeiten.<br/>
+
+Die Erfahrung jedes einzelnen Teammitglieds garantiert dabei höchste Qualität. Bei uns erhalten Sie keine vorgefertigten Antworten – wir behandeln jedes Anliegen individuell und bringen realitätsnahe Vorschläge.<br/> Mit GGV erhalten Sie ein Rundum-Paket, denn als Partner an Ihrer Seite begleiten wir Sie auch bei der Umsetzung unserer Vorschläge.
+<br/><br/>
+ <%= link_to t(:all_competences), competence_path, class: "btn btn-success" %>
+
+  </p>
+
+
+
+
+
+
+
+</section>
+
+
+
+
+   <div class="container news">
+    <h1> <%= t(:"news_home") %></h1>
+    <p style= "margin-top:0; font-weight: lighter; font-size: 10px;">___________________________________________________________________________________________________________________________________________________
+    </p>
+
+    <div class="row">
+
+      <% if @posts %>
+      <% @posts.each do |post| %>
+      <div class="col-xs-6 col-sm-4 lawyer-parade">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cloudinary_url post.illustration, height: 300, :crop => :scale, :alt=>"Image de l'article #{post.title}" %>);">
+          <div class="card-category"> <%= t(post.category) %><br/><% if post.date.present? %><%= t(post.date.strftime("%d %m %Y")) %><%end%></div>
+
+          <div class="card-description">
+            <% if post.title.present? %>
+          <h2><%= post.title %></h2>
+          <p><%split= post.content.split() %>
+            <% first_words = split[0..5].join(' ') %>
+            <%= first_words %> ...
+          </p>
+          <% end %>
+          </div>
+        <a class="card-link" href="<%= post_url(post) %>" data-turbolinks = "false">
+        </a>
+      </div>
+    </div>
+
+        <% end %>
+        <% end %>
+      </div>
+
+    </div>
+
+
+
+  <div class= "buttons">
+    <%= link_to t(:all_news), posts_path, class: "btn btn-success" %>
+  <% if current_user && current_user.admin %>
+
+  <%= link_to "Créer un post", new_post_path, class: "btn btn-success" %>
+  <% end %>
+  </div>
+</body>

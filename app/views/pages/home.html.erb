@@ -5,7 +5,7 @@
 
 <div class="home-banner ">
 
-<p class="home-text"> <%= t(:"greetings") %> !<br/> Nous sommes un cabinet doté d’un savoir-faire international et d’un réseau mondial.<br/>
+<p class="home-text"> <span><%= t(:"greetings") %> !</span><br/> Nous sommes un cabinet doté d’un savoir-faire international et d’un réseau mondial.<br/>
 Nous vous accompagnons dans les domaines du droit et de la fiscalité. <br/>
 
 GGV vous propose  des compétences pointues, une orientation stratégique et, le plus important : <br/>
@@ -46,11 +46,66 @@ Un engagement constant à vos côtés.</p>
 <% end %>
 </div>
 
+
 <section class="parallax">
 
+  <p class="white">
+    <span style= "font-size: 32px; font-weight: bold, letter-spacing: 1em;">" Une vision holistique " </span><br/><br/>
 
+Les clients bénéficient chez GGV de connaissances spécialisées réunies sous un même toit. <br/> Qu’il s’agisse de droit ou de fiscalité, nous allions compétences individuelles et de pluridisciplinarité.<br/>
+
+L’expérience de chaque membre de l’équipe est un gage de qualité optimale.<br/> Nous traitons individuellement chacune de vos préoccupations et vous proposons des solutions réalistes. <br/> GGV vous accompagne ensuite tout au long de votre projet. <br/><br/>
+ <%= link_to t(:all_competences), competence_path, class: "btn btn-success" %>
+
+  </p>
 
 </section>
+
+
+
+
+   <div class="container news">
+    <h1> <%= t(:"news_home") %></h1>
+    <p style= "margin-top:0; font-weight: lighter; font-size: 10px;">___________________________________________________________________________________________________________________________________________________
+    </p>
+
+    <div class="row">
+
+      <% if @posts %>
+      <% @posts.each do |post| %>
+      <div class="col-xs-6 col-sm-4 lawyer-parade">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cloudinary_url post.illustration, height: 300, :crop => :scale, :alt=>"Image de l'article #{post.title}" %>);">
+          <div class="card-category"> <%= t(post.category) %><br/><% if post.date.present? %><%= t(post.date.strftime("%d %m %Y")) %><%end%></div>
+
+          <div class="card-description">
+            <% if post.title.present? %>
+          <h2><%= post.title %></h2>
+          <p><%split= post.content.split() %>
+            <% first_words = split[0..5].join(' ') %>
+            <%= first_words %> ...
+          </p>
+          <% end %>
+          </div>
+        <a class="card-link" href="<%= post_url(post) %>" data-turbolinks = "false">
+        </a>
+      </div>
+    </div>
+
+        <% end %>
+        <% end %>
+      </div>
+
+    </div>
+
+
+
+  <div class= "buttons">
+    <%= link_to "Voir toutes nos actualité", posts_path, class: "btn btn-success" %>
+  <% if current_user && current_user.admin %>
+
+  <%= link_to "Créer un post", new_post_path, class: "btn btn-success" %>
+  <% end %>
+  </div>
 
 
 

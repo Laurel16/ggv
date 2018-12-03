@@ -6,7 +6,7 @@
 
 <div class="home-banner ">
 
-<p class="home-text"> <%= t(:"greetings") %> !<br/>We are a firm with international expertise and a global network.<br/>
+<p class="home-text"> <span><%= t(:"greetings") %> !</span><br/>We are a firm with international expertise and a global network.<br/>
   We support you in the fields of law and taxation<br/>
 
   GGV offers you advanced skills, strategic direction and, most importantly:<br/>
@@ -44,5 +44,69 @@
 <% if current_user && current_user.admin %>
 <%= link_to "Créer un avocat", new_lawyer_path, class: "btn btn-success" %>
 <% end %>
+
+
+<section class="parallax">
+
+  <p class="white">
+    <span style= "font-size: 32px; font-weight: bold, letter-spacing: 1em;">" Seeing the big picture" </span><br/><br/>
+
+At GGV, our clients have the benefit of collective expertise from a single source.<br/> Whether the topics involved are law or taxes – we count on the combination of individual competence and multidisciplinary work.<br/>
+
+The experience of each and every team member guarantees the utmost quality. <br/> With us, what you receive are not ready-made answers – we approach each set of facts individually and make realistic proposals based on them. <br/> With GGV, you get a comprehensive package: as the partner at your side, we also help you implement our proposals.<br/><br/>
+
+ <%= link_to t(:all_competences), competence_path, class: "btn btn-success" %>
+
+  </p>
+
+</section>
+
+
+
+
+   <div class="container news">
+    <h1> <%= t(:"news_home") %></h1>
+    <p style= "margin-top:0; font-weight: lighter; font-size: 10px;">___________________________________________________________________________________________________________________________________________________
+    </p>
+
+    <div class="row">
+
+      <% if @posts %>
+      <% @posts.each do |post| %>
+      <div class="col-xs-6 col-sm-4 lawyer-parade">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cloudinary_url post.illustration, height: 300, :crop => :scale, :alt=>"Image de l'article #{post.title}" %>);">
+          <div class="card-category"> <%= t(post.category) %><br/><% if post.date.present? %><%= t(post.date.strftime("%d %m %Y")) %><%end%></div>
+
+          <div class="card-description">
+            <% if post.title.present? %>
+          <h2><%= post.title %></h2>
+          <p><%split= post.content.split() %>
+            <% first_words = split[0..5].join(' ') %>
+            <%= first_words %> ...
+          </p>
+          <% end %>
+          </div>
+        <a class="card-link" href="<%= post_url(post) %>" data-turbolinks = "false">
+        </a>
+      </div>
+    </div>
+
+        <% end %>
+        <% end %>
+      </div>
+
+    </div>
+
+
+
+  <div class= "buttons">
+    <%= link_to t(:all_news), posts_path, class: "btn btn-success" %>
+  <% if current_user && current_user.admin %>
+
+  <%= link_to "Créer un post", new_post_path, class: "btn btn-success" %>
+  <% end %>
+  </div>
+
+</body>
 
 

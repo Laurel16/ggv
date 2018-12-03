@@ -11,8 +11,7 @@ de:
             taxes: "Steuern"
             compliance: "Compliance"
             litigation: "Rechtsstreit"
-
-            competences_2:
+        competences_2:
             labour: "Arbeitsweise"
             corporate: "Gesellschaftsrecht und M&A"
             commercial: "Handelsrecht"
@@ -20,8 +19,7 @@ de:
             taxes: "Steuern"
             compliance: "Compliance"
             litigation: "Rechtsstreit"
-
-            competences_3:
+        competences_3:
             labour: "Arbeitsweise"
             corporate: "Gesellschaftsrecht und M&A"
             commercial: "Handelsrecht"
@@ -29,3 +27,8 @@ de:
             taxes: "Steuern"
             compliance: "Compliance"
             litigation: "Rechtsstreit"
+      post:
+        category:
+            event: "Ereignis"
+            conference: "Konferenz"
+            media: "Medien"

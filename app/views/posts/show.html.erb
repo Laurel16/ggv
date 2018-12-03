@@ -1,0 +1,55 @@
+  <body style= "background-color: white">
+    <% content_for(:title) do %>
+    <%= @post.title %>
+    <% end %>
+  <% content_for :nav, render('shared/navbar_pages') %>
+
+
+  <div class="container post-show">
+    <h1> <%= t(@post.category) %></h1>
+    <p style= "margin-top:0; font-weight: lighter; font-size: 10px;">___________________________________________________________________________________________________________________________________________________
+    </p>
+
+    <div class="row" style= "margin-top: 50px;">
+
+      <div class="col-xs-12 col-md-6">
+         <%= cl_image_tag @post.illustration, width: 400%>
+
+      </div>
+
+      <div class="col-xs-12 col-md-6 post-title">
+         <h1 ><%= @post.title%></h1>
+         <p style= "margin-top: 15px;"> <% if @post.title.present? %> <strong> Date: </strong><%= @post.date.strftime I18n.translate('date.formats.default') %><%end%></p>
+          <p style= "margin-top: 15px;"> <% if @post.place.present? %> <strong> Lieu: </strong><%= @post.place%><%end%></p>
+
+          <p><% if @post.content.present? %>
+           <p><%= @post.content.html_safe  %> </p>
+           <%end%></p>
+          <p style= "font-size: 12px;"><% if @post.updated_at %>
+          Modifié le <%= @post.updated_at.strftime("%d %m %Y") %>
+          <% else %>
+          Créée le <%= @post.created_at.strftime("%d %m %Y") %>
+          <% end %></p>
+          </div>
+
+    </div>
+  </div>
+    <% if current_user && current_user.admin %>
+
+    <div style= "margin-bottom: 100px; text-align: center;">
+    <%= link_to "Modifier", edit_post_path(@post), class: "btn btn-success"%>
+
+    <%= link_to "Supprimer", post_path(@post), method: :delete, data: { confirm: "You sure?" },class: "btn btn-success"  %>
+    </div>
+
+    <% end %>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+<body style ="background-color:white;">
+  <% content_for :register, render('shared/navbar_pages') %>
+
+
+
+
+
+  <div class="container posts">
+    <h1> <%= t(:"posts") %></h1>
+    <p style= "margin-top:0; font-weight: lighter; font-size: 10px;">___________________________________________________________________________________________________________________________________________________
+    </p>
+
+    <div class="row">
+
+      <% if @posts %>
+      <% @posts.each do |post| %>
+      <div class="col-xs-6 col-sm-4 lawyer-parade">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cloudinary_url post.illustration, height: 300, :crop => :scale, :alt=>"Image de l'article #{post.title}" %>);">
+          <div class="card-category"> <%= t(post.category) %><br/><% if post.date.present? %><%= t(post.date.strftime("%d %m %Y")) %><%end%></div>
+
+          <div class="card-description">
+            <% if post.title.present? %>
+          <h2><%= post.title %></h2>
+          <p><%split= post.content.split() %>
+            <% first_words = split[0..5].join(' ') %>
+            <%= first_words %> ...
+          </p>
+          <% end %>
+          </div>
+        <a class="card-link" href="<%= post_url(post) %>" data-turbolinks = "false">
+        </a>
+      </div>
+    </div>
+
+        <% end %>
+        <% end %>
+      </div>
+
+    </div>
+
+
+
+  <div style= "margin-bottom: 100px; text-align: center;">
+  <% if current_user && current_user.admin %>
+
+  <%= link_to "Créer un post", new_post_path, class: "btn btn-success" %>
+  <% end %>
+  </div>
+
+</body>

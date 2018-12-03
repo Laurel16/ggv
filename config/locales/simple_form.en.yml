@@ -51,7 +51,6 @@ en:
             taxes: "Taxes"
             compliance: "Compliance"
             litigation: "Litigation"
-
         competences_2:
             labour: "Labour law"
             corporate: "Corporate law and M&A"
@@ -60,7 +59,6 @@ en:
             taxes: "Taxes"
             compliance: "Compliance"
             litigation: "Litigation"
-
         competences_3:
             labour: "Labour law"
             corporate: "Corporate law and M&A"
@@ -69,4 +67,10 @@ en:
             taxes: "Taxes"
             compliance: "Compliance"
             litigation: "Litigation"
+    post:
+        category:
+            event: "Event"
+            conference: "Conference"
+            media: "Media"
+
 

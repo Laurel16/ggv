@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181130100653) do
+ActiveRecord::Schema.define(version: 20181203130726) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,8 @@ ActiveRecord::Schema.define(version: 20181130100653) do
     t.string "category"
     t.text "content"
     t.string "illustration"
+    t.datetime "date"
+    t.string "place"
     t.index ["locale"], name: "index_post_translations_on_locale"
     t.index ["post_id"], name: "index_post_translations_on_post_id"
   end
@@ -84,6 +86,8 @@ ActiveRecord::Schema.define(version: 20181130100653) do
     t.string "category"
     t.text "content"
     t.string "illustration"
+    t.datetime "date"
+    t.string "place"
   end
 
   create_table "users", force: :cascade do |t|
