@@ -4,7 +4,7 @@
       <div class="container-lg margin-top">
         <div class="row margin-big-form">
           <div class="col-sm-6 col-sm-offset-3">
-            <div class="background-white-new-notice  ">
+            <div class="background-white-new-notice big ">
       <br/>
 
 
@@ -12,8 +12,8 @@
 <%= I18n.locale %>
 </p>
       <%= simple_form_for @lawyer do |f| %>
-      <%= f.input :first_name, label: "prénom") %>
-      <%= f.input :last_name, label: "Nom"%>
+      <%= f.input :first_name, label: I18n.t("first_name") %>
+      <%= f.input :last_name, label: "cuicui"%>
        <%= f.input :status, label: "Statut"%>
        <%= f.input :bar, label: "Quel barreau?" %>
        <%= f.input :presentation, label: "Présentation"%>
@@ -42,7 +42,7 @@
             </ul>
           </div>
         <% end %>
-
+    <% end %>
 
 
             </div>
