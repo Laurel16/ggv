@@ -14,11 +14,11 @@
       <div class="col-xs-6 col-sm-3 lawyer-parade">
 
       <a href="<%= lawyer_url(lawyer) %>" data-turbolinks = "false">
-
+                <% if lawyer.picture.present? %>
                  <%= cl_image_tag lawyer.picture, class:"avatar-large"%>
       </a>
                 <p><%= "#{lawyer.first_name}"+ " "+ "#{lawyer.last_name}"%></p>
-
+                <% end %>
 
 
 

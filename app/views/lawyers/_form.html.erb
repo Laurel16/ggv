@@ -8,12 +8,12 @@
       <br/>
 
 
-<p><b>I18n.locale:</b>
+<p><b>locale:</b>
 <%= I18n.locale %>
 </p>
       <%= simple_form_for @lawyer do |f| %>
-      <%= f.input :first_name, label: I18n.t("first_name") %>
-      <%= f.input :last_name, label: "cuicui"%>
+      <%= f.input :first_name, label: "prénom") %>
+      <%= f.input :last_name, label: "Nom"%>
        <%= f.input :status, label: "Statut"%>
        <%= f.input :bar, label: "Quel barreau?" %>
        <%= f.input :presentation, label: "Présentation"%>

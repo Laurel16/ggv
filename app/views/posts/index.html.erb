@@ -14,8 +14,11 @@
 
       <% if @posts %>
       <% @posts.each do |post| %>
+
       <div class="col-xs-6 col-sm-4 lawyer-parade">
+        <% if post.illustration.present? %>
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cloudinary_url post.illustration, height: 300, :crop => :scale, :alt=>"Image de l'article #{post.title}" %>);">
+          <% end %>
           <div class="card-category"> <%= t(post.category) %><br/><% if post.date.present? %><%= t(post.date.strftime("%d %m %Y")) %><%end%></div>
 
           <div class="card-description">

@@ -13,8 +13,9 @@
     <div class="row" style= "margin-top: 50px;">
 
       <div class="col-xs-12 col-md-6">
+        <% if post.illustration.present? %>
          <%= cl_image_tag @post.illustration, width: 400%>
-
+        <%end%>
       </div>
 
       <div class="col-xs-12 col-md-6 post-title">
