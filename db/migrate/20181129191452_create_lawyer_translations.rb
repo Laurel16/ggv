@@ -25,10 +25,6 @@ class CreateLawyerTranslations < ActiveRecord::Migration[5.1]
           :migrate_data => true
         })
       end
-
-      dir.down do
-        Lawyer.drop_translation_table! :migrate_data => true
-      end
     end
   end
 end
