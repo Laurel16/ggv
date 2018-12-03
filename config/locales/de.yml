@@ -25,6 +25,9 @@ de:
   news_home: "Unsere Neuigkeiten"
   all_competences: "Alle unsere Fähigkeiten und Fachkenntnisse"
   all_news: "Alle unsere Neuigkeiten"
+  dates:
+    formats:
+      default: "%d %B %Y"
 
 
 

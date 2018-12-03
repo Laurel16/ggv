@@ -26,7 +26,7 @@ fr:
   all_news: "Toutes nos actualités"
   dates:
     formats:
-      default: "%d-%B-%Y"
+      default: "%d %B %Y"
 
 
 

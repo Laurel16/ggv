@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181203175127) do
+ActiveRecord::Schema.define(version: 20181203183335) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 20181203175127) do
     t.string "illustration"
     t.datetime "date"
     t.string "place"
+    t.string "illustration_cache"
     t.index ["locale"], name: "index_post_translations_on_locale"
     t.index ["post_id"], name: "index_post_translations_on_post_id"
   end

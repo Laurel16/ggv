@@ -19,7 +19,6 @@
         <%= f.input :content, as: :text, label: :text%>
         <%= f.input :category, collection:Post::SUBJECTS, label: :category, :include_blank => '' %>
         <%= f.input :date, as: :date, :include_blank => '(All)', label: :date%>
-        <%= f.input :place, label: :place %>
         <%= f.input :illustration, label: :illustration %>
         <%= f.input :illustration_cache, as: :hidden %>
 

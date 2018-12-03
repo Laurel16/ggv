@@ -56,7 +56,9 @@ en:
   news_home: "Our latest news"
   all_competences: "All our skills and expertise"
   all_news: "Our news and events"
-
+  dates:
+    formats:
+      default: "%Y %d %B "
 
 
 
