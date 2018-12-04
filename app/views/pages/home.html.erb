@@ -42,10 +42,11 @@ Un engagement constant à vos côtés.</p>
 <div style= "margin-bottom: 100px; text-align: center;">
 <% if current_user && current_user.admin %>
 
-<%= link_to "Créer un avocat", new_lawyer_path, class: "btn btn-success" %>
+<div class= "buttons">
+<%= link_to t(:lawyer_creation), new_lawyer_path, class: "btn btn-success" %>
 <% end %>
 </div>
-
+</div>
 
 <section class="parallax">
 
@@ -101,10 +102,10 @@ L’expérience de chaque membre de l’équipe est un gage de qualité optimale
 
 
   <div class= "buttons">
-    <%= link_to "Voir toutes nos actualité", posts_path, class: "btn btn-success" %>
+    <%= link_to t(:all_news), posts_path, class: "btn btn-success" %>
   <% if current_user && current_user.admin %>
 
-  <%= link_to "Créer un post", new_post_path, class: "btn btn-success" %>
+  <%= link_to t(:post_creation), new_post_path, class: "btn btn-success" %>
   <% end %>
   </div>
 

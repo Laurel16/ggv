@@ -1,5 +1,9 @@
 fr:
   simple_form:
+    labels:
+      lawyer:
+        first: "Prénom"
+        last: "Nom"
     options:
       lawyer:
         competences:

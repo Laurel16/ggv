@@ -43,10 +43,12 @@ Ein ständiges Engagement an Ihrer Seite.<br/>
 
   </div>
 
- <% if current_user && current_user.admin %>
-<%= link_to "Créer un avocat", new_lawyer_path, class: "btn btn-success" %>
-<% end %>
+  <div class= "buttons">
 
+     <% if current_user && current_user.admin %>
+    <%= link_to t(:lawyer_creation), new_lawyer_path, class: "btn btn-success" %>
+    <% end %>
+  </div>
 
 <section class="parallax">
 
@@ -111,7 +113,7 @@ Die Erfahrung jedes einzelnen Teammitglieds garantiert dabei höchste Qualität.
     <%= link_to t(:all_news), posts_path, class: "btn btn-success" %>
   <% if current_user && current_user.admin %>
 
-  <%= link_to "Créer un post", new_post_path, class: "btn btn-success" %>
+  <%= link_to t(:post_creation), new_post_path, class: "btn btn-success" %>
   <% end %>
   </div>
 </body>

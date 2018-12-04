@@ -44,7 +44,7 @@ gem 'rails-i18n'
 gem 'devise'
 gem 'jquery-turbolinks'
 gem 'dotenv-rails', groups: [:development, :test]
-gem 'cloudinary'
+gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
 gem 'i18n-active_record', :require => 'i18n/active_record'
 gem 'globalize', '~> 5.1.0'

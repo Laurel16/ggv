@@ -250,7 +250,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   carrierwave (~> 1.2)
-  cloudinary
+  cloudinary (~> 1.9.1)
   coffee-rails (~> 4.2)
   devise
   dotenv-rails

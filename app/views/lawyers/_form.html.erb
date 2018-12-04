@@ -12,22 +12,22 @@
 <%= I18n.locale %>
 </p>
       <%= simple_form_for @lawyer do |f| %>
-      <%= f.input :first_name, label: I18n.t("first_name") %>
-      <%= f.input :last_name, label: "cuicui"%>
-       <%= f.input :status, label: "Statut"%>
-       <%= f.input :bar, label: "Quel barreau?" %>
-       <%= f.input :presentation, label: "Présentation"%>
-      <%= f.input :competences, collection: [ :labour, :corporate, :commercial, :real_estate, :taxes, :compliance, :litigation ], label: "Domaines de compétence", :include_blank => '' %>
-      <%= f.input :competences_2, collection: [ :labour, :corporate, :commercial, :real_estate, :taxes, :compliance, :litigation ], label: "Domaines de compétence 2", :include_blank => '' %>
-      <%= f.input :competences_3, collection: [ :labour, :corporate, :commercial, :real_estate, :taxes, :compliance, :litigation ], label: "Domaines de compétence 3", :include_blank => '' %>
-      <%= f.input :competences_details, label: "Détail des compétence", prompt: "Détaillez les compétences" %>
-      <%= f.input :languages, label: "Langues parlées"%>
-      <%= f.input :course, as: :text, label: "Quel est son parcours?" %>
-      <%= f.input :picture, label: "Voulez-vous ajouter une photo?" %>
+      <%= f.input :first_name, label: t(:first_name) %>
+      <%= f.input :last_name, label: t(:last_name)%>
+       <%= f.input :status, label: t(:status)%>
+       <%= f.input :bar, label: t(:bar)%>
+       <%= f.input :presentation, label: t(:presentation)%>
+      <%= f.input :competences, collection: [ :labour, :corporate, :commercial, :real_estate, :taxes, :compliance, :litigation ], label: t(:competences), :include_blank => '' %>
+      <%= f.input :competences_2, collection: [ :labour, :corporate, :commercial, :real_estate, :taxes, :compliance, :litigation ], label: t(:competences_2), :include_blank => '' %>
+      <%= f.input :competences_3, collection: [ :labour, :corporate, :commercial, :real_estate, :taxes, :compliance, :litigation ], label: t(:competences_3), :include_blank => '' %>
+      <%= f.input :competences_details, label: t(:fields_details), prompt: "Détaillez les compétences" %>
+      <%= f.input :languages, label: t(:spoken) %>
+      <%= f.input :course, as: :text, label: t(:course) %>
+      <%= f.input :picture, label: t(:photo)%>
       <%= f.input :picture_cache, as: :hidden %>
-      <%= f.input :address, label: "adresse" %>
-      <%= f.input :phone, label: "Numéro de téléphone" %>
-      <%= f.input :mail, label: "mail" %>
+      <%= f.input :address, label: t(:address)%>
+      <%= f.input :phone, label: t(:phone) %>
+      <%= f.input :mail, label: t(:email) %>
       <%= f.input :vCard, label: "vCard" %>
       <%= f.input :pdf, label: "PDF" %>
 

@@ -1,9 +1,19 @@
 de:
   greetings : "Willkommen auf der Website von GGV"
-
   lawyers: "Rechtsanwälte"
+  first_name: "Vorname"
+  last_name: "Name"
+  status: "Status"
+  bar: "Anwaltskammer "
+  presentation: "Präsentation"
+  fields_details: "Details zu den Kompetenzen"
+  address: "Adresse"
+  phone: "Telefon"
   news: "Nachrichten"
   contact: "Kontakte"
+  competences: "Kompetenz"
+  competences_2: "Kompetenz 2"
+  competences_3: "Kompetenz 3"
   competence: "Kompetenzen"
   languages: "Sprachen"
   team: "Unser Team"
@@ -25,6 +35,12 @@ de:
   news_home: "Unsere Neuigkeiten"
   all_competences: "Alle unsere Fähigkeiten und Fachkenntnisse"
   all_news: "Alle unsere Neuigkeiten"
+  when: "Datum"
+  where: "Ort"
+  change: "Geändert am"
+  create: "Hat die"
+  post_creation: "Artikel erstellen"
+  lawyer_creation: "Anwalt erstellen"
   dates:
     formats:
       default: "%d %B %Y"

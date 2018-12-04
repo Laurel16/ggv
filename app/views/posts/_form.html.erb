@@ -18,10 +18,10 @@
         <%= f.input :title, label: :title %>
         <%= f.input :content, as: :text, label: :text%>
         <%= f.input :category, collection:Post::SUBJECTS, label: :category, :include_blank => '' %>
-        <%= f.input :date, as: :date, :include_blank => '(All)', label: :date%>
+        <%= f.input :date, as: :date, :include_blank => '', label: :date%>
+        <%= f.input :place, :include_blank => '', label: :place%>
         <%= f.input :illustration, label: :illustration %>
         <%= f.input :illustration_cache, as: :hidden %>
-
         <%= f.button :submit, class: "btn btn-success" %>
         <% if @post.errors.any? %>
             <div class="errors-container">
