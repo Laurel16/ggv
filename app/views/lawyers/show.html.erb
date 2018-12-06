@@ -38,8 +38,8 @@
           <% if @lawyer.course.present? %>
           <p> <%= @lawyer.course.html_safe %> </p>
           <% end %>
-          <p> <strong><%= t(:"desk") %> <%= @lawyer.address%></strong></p>
-          <p><strong><%= t(:"phone")%><%= @lawyer.phone%></p>
+          <p> <strong><%= t(:"desk") %> </strong> <%= @lawyer.address%></p>
+          <p><strong><%= t(:"phone")%>:</strong> <%= @lawyer.phone%></p>
           <p><strong>Email:</strong> <%= @lawyer.mail%></p>
 
       </div>
