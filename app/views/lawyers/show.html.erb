@@ -20,7 +20,7 @@
          <h1 ><%= "#{@lawyer.first_name}"+ " "+ "#{@lawyer.last_name}" %></h1>
            <p><%= @lawyer.status %></p>
            <p><%= @lawyer.bar %> </p>
-           <p> <%= @lawyer.presentation %></p>
+           <p class="text-justify"> <%= @lawyer.presentation %></p>
            <p><strong><%= t(:"domaines") %> </strong> :
              <% if @lawyer.competences.present? %>
             <%= t(@lawyer.competences) %>
