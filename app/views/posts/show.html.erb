@@ -6,7 +6,7 @@
 
 
   <div class="container post-show">
-    <h1> <%= t(@post.category) %></h1>
+    <h1> <% if @post.category.present? %><%= t(@post.category) %><%end%></h1>
     <p style= "margin-top:0; font-weight: lighter; font-size: 10px;">___________________________________________________________________________________________________________________________________________________
     </p>
 
@@ -26,13 +26,18 @@
           <p><% if @post.content.present? %>
            <p class= "text-justify"><%= @post.content.html_safe  %> </p>
            <%end%></p>
-
+          <p style= "font-size: 12px;"><% if @post.updated_at %>
+         <%= t(:change) %> <%= @post.updated_at.strftime("%d %m %Y") %>
+          <% else %>
+          <%= t(:create)%> <%= @post.created_at.strftime("%d %m %Y") %>
+          <% end %></p>
+          </div>
 
     </div>
   </div>
     <% if current_user && current_user.admin %>
 
-    <div style= "margin-bottom: 100px; text-align: center;">
+    <div class="buttons">
     <%= link_to "Modifier", edit_post_path(@post), class: "btn btn-success"%>
 
     <%= link_to "Supprimer", post_path(@post), method: :delete, data: { confirm: "You sure?" },class: "btn btn-success"  %>

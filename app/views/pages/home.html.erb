@@ -20,18 +20,18 @@ Un engagement constant à vos côtés.</p>
 
     <% if @lawyers %>
     <% @lawyers.each do |lawyer| %>
-    <div class="col-xs-6 col-sm-3 lawyer-parade">
+        <div class="col-xs-6 col-sm-3 lawyer-parade">
 
-    <a href="<%= lawyer_url(lawyer) %>" data-turbolinks = "false">
-              <% if lawyer.picture.present? %>
-               <%= cl_image_tag lawyer.picture, class:"avatar-large"%>
-    </a>
-              <p><%= "#{lawyer.first_name}"+ " "+ "#{lawyer.last_name}"%></p>
+        <a href="<%= lawyer_url(lawyer) %>" data-turbolinks = "false">
+                  <% if lawyer.picture.present? %>
+                   <%= cl_image_tag lawyer.picture, class:"avatar-large"%>
+        </a>
+                  <p><%= "#{lawyer.first_name}"+ " "+ "#{lawyer.last_name}"%></p>
 
-              <%end %>
+                  <%end %>
 
 
-              </div>
+        </div>
 
       <% end %>
       <% end %>
@@ -39,14 +39,13 @@ Un engagement constant à vos côtés.</p>
 
   </div>
 
-<div style= "margin-bottom: 100px; text-align: center;">
+<div style= "margin-top: 0; margin-bottom: 100px; text-align: center;">
 <% if current_user && current_user.admin %>
 
-<div class= "buttons">
-<%= link_to t(:lawyer_creation), new_lawyer_path, class: "btn btn-success" %>
+<%= link_to "Créer un avocat", new_lawyer_path, class: "btn btn-success" %>
 <% end %>
 </div>
-</div>
+
 
 <section class="parallax">
 
@@ -66,38 +65,36 @@ L’expérience de chaque membre de l’équipe est un gage de qualité optimale
 
 
    <div class="container news">
-    <h1> <%= t(:"news_home") %></h1>
-    <p style= "margin-top:0; font-weight: lighter; font-size: 10px;">___________________________________________________________________________________________________________________________________________________
-    </p>
+      <h1> <%= t(:"news_home") %></h1>
+      <p style= "margin-top:0; font-weight: lighter; font-size: 10px;">___________________________________________________________________________________________________________________________________________________
+      </p>
 
-    <div class="row">
+        <div class="row">
 
-      <% if @posts %>
-      <% @posts.each do |post| %>
-      <div class="col-xs-6 col-sm-4 lawyer-parade">
-        <% if post.illustration.present? %>
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cloudinary_url post.illustration, height: 300, :crop => :scale, :alt=>"Image de l'article #{post.title}" %>);">
-          <div class="card-category"> <%= t(post.category) %><br/><% if post.date.present? %><%= t(post.date.strftime("%d %m %Y")) %><%end%></div>
-        <% end%>
-          <div class="card-description">
-            <% if post.title.present? %>
-          <h2><%= post.title %></h2>
-          <p><%split= post.content.split() %>
-            <% first_words = split[0..5].join(' ') %>
-            <%= first_words %> ...
-          </p>
-          <% end %>
+          <% if @posts %>
+          <% @posts.each do |post| %>
+          <div class="col-xs-6 col-sm-4 lawyer-parade">
+            <% if post.illustration.present? %>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cloudinary_url post.illustration, height: 300, :crop => :scale, :alt=>"Image de l'article #{post.title}" %>);">
+              <div class="card-category"> <%= t(post.category) %><br/><% if post.date.present? %><%= t(post.date.strftime("%d %m %Y")) %><%end%></div>
+            <% end%>
+              <div class="card-description">
+                <% if post.title.present? %>
+              <h2><%= post.title %></h2>
+              <p><%split= post.content.split() %>
+                <% first_words = split[0..5].join(' ') %>
+                <%= first_words %> ...
+              </p>
+              <% end %>
+              </div>
+            <a class="card-link" href="<%= post_url(post) %>" data-turbolinks = "false">
+            </a>
           </div>
-        <a class="card-link" href="<%= post_url(post) %>" data-turbolinks = "false">
-        </a>
+        </div>
       </div>
-    </div>
-
         <% end %>
         <% end %>
       </div>
-
-    </div>
 
 
 
@@ -108,12 +105,6 @@ L’expérience de chaque membre de l’équipe est un gage de qualité optimale
   <%= link_to t(:post_creation), new_post_path, class: "btn btn-success" %>
   <% end %>
   </div>
-
-
-
-
-
-
 
 
 </body>

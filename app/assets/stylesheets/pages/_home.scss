@@ -56,6 +56,12 @@ padding: 50px;
   width: 100%;
 }
 
+.parallax a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+
+}
+
 .white {
 color: rgb(255, 255, 255);
 font-family: raleway;
@@ -75,7 +81,7 @@ padding: 30px;
 
 color: #003781;
 margin-top: 40px;
-margin-bottom: 150px;
+margin-bottom: 100px;
 }
 
 
@@ -215,7 +221,7 @@ margin-bottom: 100px;
 .buttons
 {
 margin-top: 0px;
-margin-bottom: 180px;
+padding-bottom: 180px;
 text-align: center;
 }
 
