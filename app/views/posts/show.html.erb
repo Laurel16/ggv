@@ -24,14 +24,9 @@
           <p style= "margin-top: 15px;"> <% if @post.place.present? %> <strong> <%= t (:where) %>: </strong><%= @post.place%><%end%></p>
 
           <p><% if @post.content.present? %>
-           <p><%= @post.content.html_safe  %> </p>
+           <p class= "text-justify"><%= @post.content.html_safe  %> </p>
            <%end%></p>
-          <p style= "font-size: 12px;"><% if @post.updated_at %>
-         <%= t(:change) %> <%= @post.updated_at.strftime("%d %m %Y") %>
-          <% else %>
-          <%= t(:create)%> <%= @post.created_at.strftime("%d %m %Y") %>
-          <% end %></p>
-          </div>
+
 
     </div>
   </div>
