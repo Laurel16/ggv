@@ -39,7 +39,7 @@
           <p> <%= @lawyer.course.html_safe %> </p>
           <% end %>
           <p> <strong><%= t(:"desk") %> <%= @lawyer.address%></strong></p>
-          <p><%= @lawyer.phone%></p>
+          <p><strong><%= t(:"phone")%><%= @lawyer.phone%></p>
           <p><strong>Email:</strong> <%= @lawyer.mail%></p>
 
       </div>
